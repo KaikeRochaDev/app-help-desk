@@ -33,6 +33,12 @@
             </div>
             <div class="card-body">
               <form action="http://localhost/app_help_desk/valida_login.php" method="post">
+                <?
+                  if(isset($_GET['login']) && $_GET['login'] == 'erro'){ ?>
+                    <div class="text-danger">
+                      Usuário ou senha inválido(s)
+                    </div>
+                <? } ?>
                 <div class="form-group">
                   <input name="email" type="email" class="form-control" placeholder="E-mail">
                 </div>

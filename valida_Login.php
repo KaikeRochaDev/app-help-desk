@@ -1,20 +1,23 @@
 <?php
-    /*
-    print_r($_GET);
 
-    echo '<br>';
+    $usuario_autenticado = false;
 
-    echo $_GET['email'];
-    echo '<br>';
-    echo $_GET['senha'];
+    $usuarios_app = array(
+        array('email' => 'adm@teste.com.br', 'senha' => '123456'),
+        array('email' => 'user@teste.com.br', 'senha' => 'abcd'),
+    );
 
-    */
+    foreach($usuarios_app as $user) {
 
-    print_r($_POST);
+        if($user['email'] == $_POST['email'] && $user['senha'] == $_POST['senha']) {
+            $usuario_autenticado = true;
+        }
 
-    echo '<br>';
+    }
 
-    echo $_POST['email'];
-    echo '<br>';
-    echo $_POST['senha'];
+    if($usuario_autenticado) {
+        echo 'Usuário autenticado';
+    } else {
+        header('Location: index.php?login=erro');
+    }
 ?>
