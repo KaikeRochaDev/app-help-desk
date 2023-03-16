@@ -39,6 +39,13 @@
                       Usuário ou senha inválido(s)
                     </div>
                 <? } ?>
+
+                <?
+                  if(isset($_GET['login']) && $_GET['login'] == 'erro2'){ ?>
+                    <div class="text-danger">
+                      Faça login antes de acessar as páginas protegidas
+                    </div>
+                <? } ?>
                 <div class="form-group">
                   <input name="email" type="email" class="form-control" placeholder="E-mail">
                 </div>
