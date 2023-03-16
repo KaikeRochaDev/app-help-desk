@@ -38,6 +38,7 @@
                     <div class="text-danger">
                       Usuário ou senha inválido(s)
                     </div>
+                    <br>
                 <? } ?>
 
                 <?
@@ -45,6 +46,7 @@
                     <div class="text-danger">
                       Faça login antes de acessar as páginas protegidas
                     </div>
+                    <br>
                 <? } ?>
                 <div class="form-group">
                   <input name="email" type="email" class="form-control" placeholder="E-mail">
