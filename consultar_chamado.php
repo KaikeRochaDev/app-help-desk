@@ -3,7 +3,7 @@
 <?php
 
   $chamados = array();
-  $arquivo = fopen('arquivo.txt', 'r');
+  $arquivo = fopen('../../app_help_desk/arquivo.txt', 'r');
 
   while(!feof($arquivo)){
     $registro = fgets($arquivo);
